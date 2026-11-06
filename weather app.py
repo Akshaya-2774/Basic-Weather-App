@@ -2,21 +2,20 @@
 import requests
 import os
 
-# Get API key securely from environment variable
 api_key = os.getenv("OPENWEATHER_API_KEY")
 
 if not api_key:
     print("API key is missing! Please set your API key.")
     exit()
 
-# Get city name
+
 city = input("Enter city name: ").strip()
 
 if not city:
     print("Please enter a valid city name!")
     exit()
 
-# OpenWeatherMap API URL
+
 url = "https://api.openweathermap.org/data/2.5/weather"
 
 params = {
